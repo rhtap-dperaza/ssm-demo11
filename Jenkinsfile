@@ -2,7 +2,7 @@
 
 library identifier: 'RHTAP_Jenkins@release-v1.7.x', retriever: modernSCM(
   [$class: 'GitSCMSource',
-   remote: 'https://github.com/dperaza4dustbit/tssc-sample-jenkins.git'])
+   remote: 'https://github.com/redhat-appstudio/tssc-sample-jenkins.git'])
 
 pipeline {
     agent {
@@ -22,6 +22,7 @@ pipeline {
         }
     }
     environment {
+        REKOR_HOST = credentials('REKOR_HOST')
         ROX_API_TOKEN = credentials('ROX_API_TOKEN')
         ROX_CENTRAL_ENDPOINT = credentials('ROX_CENTRAL_ENDPOINT')
         GITOPS_AUTH_USERNAME = credentials('GITOPS_AUTH_USERNAME')
