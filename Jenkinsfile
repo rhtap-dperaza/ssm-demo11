@@ -23,6 +23,7 @@ pipeline {
     }
     environment {
         ROX_API_TOKEN = credentials('ROX_API_TOKEN')
+        ROX_CENTRAL_ENDPOINT = credentials('ROX_CENTRAL_ENDPOINT')
         GITOPS_AUTH_PASSWORD = credentials('GITOPS_AUTH_PASSWORD')
         /* Set this password for your specific registry */
         /* IMAGE_REGISTRY_PASSWORD = credentials('IMAGE_REGISTRY_PASSWORD') */
@@ -32,6 +33,7 @@ pipeline {
         /* NEXUS_IO_CREDS = credentials('NEXUS_IO_CREDS') */
         COSIGN_SECRET_PASSWORD = credentials('COSIGN_SECRET_PASSWORD')
         COSIGN_SECRET_KEY = credentials('COSIGN_SECRET_KEY')
+        COSIGN_PUBLIC_KEY = credentials('COSIGN_PUBLIC_KEY')
     }
     stages {
         stage('init') {
