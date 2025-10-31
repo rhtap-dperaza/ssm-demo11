@@ -22,8 +22,6 @@ pipeline {
         }
     }
     environment {
-        REKOR_HOST = credentials('REKOR_HOST')
-        TUF_MIRROR = credentials('TUF_MIRROR')
         ROX_API_TOKEN = credentials('ROX_API_TOKEN')
         ROX_CENTRAL_ENDPOINT = credentials('ROX_CENTRAL_ENDPOINT')
         GITOPS_AUTH_USERNAME = credentials('GITOPS_AUTH_USERNAME')
