@@ -1,8 +1,8 @@
 /* Generated from templates/source-repo/Jenkinsfile.njk. Do not edit directly. */
 
-library identifier: 'RHTAP_Jenkins@release-v1.7.x', retriever: modernSCM(
+library identifier: 'RHTAP_Jenkins@main', retriever: modernSCM(
   [$class: 'GitSCMSource',
-   remote: 'https://github.com/redhat-appstudio/tssc-sample-jenkins.git'])
+   remote: 'https://github.com/dperaza4dustbit/tssc-sample-jenkins.git'])
 
 pipeline {
     agent {
