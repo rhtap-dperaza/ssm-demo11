@@ -22,6 +22,7 @@ pipeline {
         }
     }
     environment {
+        REKOR_HOST = 'none'
         ROX_API_TOKEN = credentials('ROX_API_TOKEN')
         ROX_CENTRAL_ENDPOINT = credentials('ROX_CENTRAL_ENDPOINT')
         GITOPS_AUTH_USERNAME = credentials('GITOPS_AUTH_USERNAME')
